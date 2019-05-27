@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Stations</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content padding>
+  <ion-list>
+  <ion-item *ngFor="let station of stationsList">
+     <ion-card>
+         <ion-card-header>
+           <ion-card-title>{{station.name}}</ion-card-title>
+           <ion-card-subtitle>{{ station.state}}</ion-card-subtitle>
+           <ion-card-subtitle>{{ station.description}}</ion-card-subtitle>
+         </ion-card-header>
+         <ion-card-content>
+         <ion-button shape="round" fill="outline" color="danger" expand="full" [routerLink]="['/bikes', station._id]">Details</ion-button>
+        </ion-card-content>
+       </ion-card>
+  </ion-item>
+</ion-list>
+</ion-content> -->
+
+
+<ion-content>
+    <ion-list lines="full">
+      <ion-list-header>
+        <ion-label>Stationes availables</ion-label>
+      </ion-list-header>
+      <ion-list-header>
+        <ion-label>NAME</ion-label>
+          <ion-label>DESCRIPTION</ion-label>
+          <ion-label>STATE</ion-label>
+          <ion-label>DETAILS</ion-label>
+        </ion-list-header>
+      <ion-item  *ngFor="let station of stationsList">
+        <ion-label>{{station.name}}</ion-label>
+        <ion-label>{{station.state}}</ion-label>
+        <ion-label>{{station.description}}</ion-label>
+        <ion-button shape="round" fill="outline" color="danger" expand="full" [routerLink]="['/bikes', station._id]">Details</ion-button>
+      </ion-item>
+     </ion-list>
+</ion-content>
